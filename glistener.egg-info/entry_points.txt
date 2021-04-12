@@ -1,0 +1,3 @@
+[console_scripts]
+glistener = listener.gpu_standalone_listener:main
+
