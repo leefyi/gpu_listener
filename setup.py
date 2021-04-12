@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 print(find_packages())
 setup(
     name="glistener",
-    version="1.0.0",
+    version="1.0.1",
     author="leefyi",
     author_email="leefyi@126.com",
     description="single gpu listener of one time period",
