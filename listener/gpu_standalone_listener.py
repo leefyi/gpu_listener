@@ -71,6 +71,7 @@ def get_gpus():
 
     :return: None
     """
+    global GPUs
     if platform.system() == "Windows":
         # If the platform is Windows and nvidia-smi
         # could not be found from the environment path,
@@ -252,7 +253,6 @@ def report(header, messages, duration_time, interval):
         print("GPU众数利用率: {}%".format(str_major_gpu))
         print("-" * 50)
     print("=" * 50)
-    GPUs = []
 
 
 def main():
@@ -280,11 +280,10 @@ def main():
     if delay >= duration:
         print("invalid --l value, should be: delay < duration")
         sys.exit(1)
-    mutex = threading.Lock()
+
     # timer
     def gpu_timer():
         # print("Hello Timer!")
-        mutex.acquire()
         get_gpus()
         global timer
         timer = threading.Timer(delay, gpu_timer)
@@ -295,7 +294,6 @@ def main():
     time.sleep(duration)
     timer.cancel()
 
-    mutex.release()
     # statistics
     count = len(GPUs)
     title = "GPU Numbers: {0}\n" "Device: {1}\n" "Driver Version: {2}"
