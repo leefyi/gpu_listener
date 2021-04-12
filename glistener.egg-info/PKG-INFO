@@ -1,8 +1,8 @@
 Metadata-Version: 1.0
 Name: glistener
-Version: 1.0.0
+Version: 1.0.1
 Summary: single gpu listener of one time period
-Home-page: UNKNOWN
+Home-page: https://github.com/leefyi/gpu_listener
 Author: leefyi
 Author-email: leefyi@126.com
 License: MIT License
