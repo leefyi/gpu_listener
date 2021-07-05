@@ -25,13 +25,13 @@ Python文件
 ### 4. 使用说明
 
 ```
-usage: gpu_standalone_listener.py [-h] --d d [--l [l]]
+usage: gpu_standalone_listener.py [-h] --d [d] [--l [l]]
 
 Process some important options
 
 optional arguments:
   -h, --help  show this help message and exit
-  --d d       duration(s) of statistics
+  --d [d]       duration(s) of statistics
   --l [l]     delay or interval of sampler, in second
   
 d为必填参数，单位是秒，意为采集的持续时间;
